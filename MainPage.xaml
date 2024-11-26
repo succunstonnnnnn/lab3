@@ -1,0 +1,31 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JsonManager.MainPage"
+             Title="Диспетчер JSON">
+    <Grid Padding="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <StackLayout Grid.Column="0" Spacing="10" VerticalOptions="Start">
+            <Button Text="Відкрити JSON" Clicked="OnOpenJsonFileClicked" />
+            <Button Text="Додати" Clicked="OnAddClicked" />
+            <Button Text="Редагувати" Clicked="OnEditClicked" />
+            <Button Text="Видалити" Clicked="OnDeleteClicked" />
+            <Button Text="Зберегти JSON" Clicked="OnSaveJsonClicked" />
+            <Button Text="Про програму" Clicked="OnAboutClicked" />
+            <Button Text="Вийти" Clicked="OnExitClicked" />
+        </StackLayout>
+        
+        <StackLayout Grid.Column="1" Spacing="10">
+            <Entry x:Name="SearchBox" Placeholder="Пошук..." TextChanged="OnSearchTextChanged" />
+            
+            <ScrollView>
+                <Grid x:Name="ScientistsGrid" VerticalOptions="Start">
+                    <!-- Динамічна таблиця -->
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+    </Grid>
+</ContentPage>

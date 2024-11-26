@@ -1,0 +1,15 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JsonManager.ScientistForm"
+             Title="Додати/Редагувати запис">
+    <VerticalStackLayout Padding="20" Spacing="10">
+        <Entry x:Name="FullNameEntry" Placeholder="П.І.П." />
+        <Entry x:Name="FacultyEntry" Placeholder="Факультет" />
+        <Entry x:Name="ChairEntry" Placeholder="Кафедра" />
+        <Entry x:Name="DegreeEntry" Placeholder="Науковий ступінь" />
+        <Entry x:Name="RankEntry" Placeholder="Вчене звання" />
+        <DatePicker x:Name="TitleDatePicker" />
+        <Button Text="Зберегти" Clicked="OnSaveClicked" />
+        <Button Text="Скасувати" Clicked="OnCancelClicked" />
+    </VerticalStackLayout>
+</ContentPage>
